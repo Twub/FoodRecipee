@@ -47,11 +47,11 @@ li{
 
 .recipe-item {
   width: 100%;
+  
 }
 
 .homePageRecipe {
-  width: 100%;
-  left: 10px;
+  width:100vw; 
 }
 
   @media (min-width: 1024px) {

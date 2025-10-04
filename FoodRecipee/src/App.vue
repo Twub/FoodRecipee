@@ -12,13 +12,12 @@ import Header from './components/HeaderMenu/Header.vue'
 </template>
 
 <style scoped>
-App{
-  margin: 0%;
-}
-
 header {
   line-height: 1.5;
   max-height: 100vh;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo {
