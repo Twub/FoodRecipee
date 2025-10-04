@@ -1,4 +1,4 @@
-import './assets/main.css'
+//import './assets/main.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -8,8 +8,7 @@ import router from './router'
 
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'materialize-css'
-import 'materialize-css/dist/css/materialize.min.css'
+
 import "bootswatch/dist/cosmo/bootstrap.css"
 
 const app = createApp(App)

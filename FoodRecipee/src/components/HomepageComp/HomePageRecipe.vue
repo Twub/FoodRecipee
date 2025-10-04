@@ -33,32 +33,7 @@
 </script>
   
 <style>
-.btn-success {
-  background-color: #52c864 !important;
-}
-.btn {
-  height: 5px;
-  font-size: 0.9rem !important;
-}
-
-li{
+li {
   list-style-type: none;
 }
-
-.recipe-item {
-  width: 100%;
-  
-}
-
-.homePageRecipe {
-  width:100vw; 
-}
-
-  @media (min-width: 1024px) {
-    .homePageRecipe {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
-  }
 </style>
