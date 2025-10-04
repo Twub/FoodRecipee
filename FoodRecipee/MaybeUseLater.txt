@@ -1,0 +1,13 @@
+<li v-for="recipe in store.recipes" :key="recipe.id" class="recipe-item">
+        {{ recipe.name }}
+
+        <li v-for="ing in recipe.Ingredienser" :key="ing.id">
+            {{ ing }}
+        </li>
+
+        <li v-for="step in recipe.Steps" :key="step.id">
+            {{ step }}
+        </li>
+
+        <img :src="recipe.image">
+      </li>

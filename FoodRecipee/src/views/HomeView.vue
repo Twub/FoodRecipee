@@ -1,9 +1,9 @@
 <script setup>
-
+import HomePageRecipe from '../components/HomepageComp/HomePageRecipe.vue'
 </script>
 
 <template>
   <main>
-    <h1>Startsida!!!</h1>
+    <HomePageRecipe></HomePageRecipe>
   </main>
 </template>
