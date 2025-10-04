@@ -2,7 +2,6 @@
 import { RouterLink, RouterView } from 'vue-router'
 
 import Header from './components/HeaderMenu/Header.vue'
-import HeaderV2 from './components/HeaderMenu/HeaderV2.vue'
 </script>
 
 <template>
@@ -13,6 +12,10 @@ import HeaderV2 from './components/HeaderMenu/HeaderV2.vue'
 </template>
 
 <style scoped>
+App{
+  margin: 0%;
+}
+
 header {
   line-height: 1.5;
   max-height: 100vh;

@@ -44,6 +44,7 @@ const { styles } = useFixedHeader(headerRef)
   color: #ffffff;
   position: relative;
   display: inline-block;
+  text-decoration: none;
 }
 
 .hover-underline::after,
