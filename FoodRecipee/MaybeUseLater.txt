@@ -11,3 +11,11 @@
 
         <img :src="recipe.image">
       </li>
+
+
+DATABASE TEMPLATE
+    DOCUMENT
+        Ingredienser[]
+        Steps[]
+        image = "URL"
+        name = ""

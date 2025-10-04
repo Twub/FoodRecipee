@@ -13,7 +13,7 @@
         </ul>
         </div>
         <div class="card-footer text-muted">
-          2 days ago
+          <button type="button" class="btn btn-success">Gå till Recept</button>
         </div>
       </div>
     </li>
@@ -33,6 +33,13 @@
 </script>
   
 <style>
+.btn-success {
+  background-color: #52c864 !important;
+}
+.btn {
+  height: 5px;
+  font-size: 0.9rem !important;
+}
 
 li{
   list-style-type: none;
