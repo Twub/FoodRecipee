@@ -36,4 +36,12 @@
 li {
   list-style-type: none;
 }
+
+.recipe-item {
+  width: 27%;
+  max-width: 27%;
+  min-width: 20%;
+  float:left;
+  
+}
 </style>
