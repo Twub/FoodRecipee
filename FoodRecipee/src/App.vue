@@ -11,5 +11,10 @@ import HeaderV2 from './components/HeaderMenu/HeaderV2.vue'
 </template>
 
 <style>
-
+  body {
+    min-height: 100%;
+    background-image: url("./src/assets/images/mockup-photos-5nUNdLueQio-unsplash.jpg") !important;
+    background-repeat: no-repeat;        
+    background-size: cover;
+  }
 </style>

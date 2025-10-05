@@ -4,14 +4,6 @@
       <div class="card mb-3">
         <h3 class="card-header">{{ recipe.name }}</h3>
         <img :src="recipe.image" class="d-block user-select-none" width="100%" height="270">
-        <div class="card-body">
-          <h4>Ingredienser</h4>
-          <ul class="list-group list-group-flush">
-            <li v-for="ing in recipe.Ingredienser" :key="ing.id" class="list-group-item">
-            {{ ing }}
-            </li>
-        </ul>
-        </div>
         <div class="card-footer text-muted">
           <button type="button" class="btn btn-success">Gå till Recept</button>
         </div>
@@ -33,15 +25,22 @@
 </script>
   
 <style>
-li {
+
+.recipe-item {
+  width: 25%;
+  max-width: 25%;
+  min-width: 20%;
+  margin-left: 2%;
+  text-align:left;
+  float:left;
+  display:inline-block;
+  
   list-style-type: none;
 }
 
-.recipe-item {
-  width: 27%;
-  max-width: 27%;
-  min-width: 20%;
-  float:left;
-  
+.homePageRecipe {
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
