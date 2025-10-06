@@ -10,6 +10,8 @@ export const useRecipeStore = defineStore('recipe', {
         async fetchRecipes(){
             const querySnapshot = await getDocs(collection(db, 'recipes'));
             this.recipes = querySnapshot.docs.map(doc => ({id: doc.id, ...doc.data()}))
+            // sort ingredienser
+            
         },
         async addRecipe(recipe) {
             await addDoc(collection(db, 'recipes'), recipe)
