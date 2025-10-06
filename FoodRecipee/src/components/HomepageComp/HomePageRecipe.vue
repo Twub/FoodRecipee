@@ -9,13 +9,14 @@
         </div>
       </div>
     </li>
+    <AnalogClock class="analog-clock-home"></AnalogClock>
   </div>
 </template>
 
 <script setup>
     import { onMounted } from 'vue'
     import { useRecipeStore } from '../../stores/recipeStore'
-
+    import AnalogClock from '../Clock/Analog/AnalogClock.vue'
     const store = useRecipeStore()
 
     onMounted(() => {
@@ -24,23 +25,29 @@
 
 </script>
   
-<style>
+<style scoped>
+.analog-clock-home {
+  width: 17%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .recipe-item {
-  width: 25%;
-  max-width: 25%;
+  width: 23%;
+  max-width: 23%;
+  height: 100%;
   min-width: 20%;
   margin-left: 2%;
-  text-align:left;
-  float:left;
-  display:inline-block;
-  
-  list-style-type: none;
+  display: inline-block;
 }
 
 .homePageRecipe {
-  margin-top: 1%;
+  margin-top: 5%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.card {
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.6);
 }
 </style>
