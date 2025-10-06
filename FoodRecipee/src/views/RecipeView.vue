@@ -1,16 +1,14 @@
 <template>
-    <div class="recipe">
-      <h1>Här kommer finnas recept.</h1>
-    </div>
-  </template>
+  <div class="recipe">
+    <RecipeViewComponent></RecipeViewComponent>
+  </div>
+</template>
+
+<script setup>
+import RecipeViewComponent from '../components/RecipeViewComponents/RecipeViewComponent.vue'
+</script>
   
-  <style>
-  @media (min-width: 1024px) {
-    .recipe {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
-  }
-  </style>
+<style>
+  
+</style>
   
