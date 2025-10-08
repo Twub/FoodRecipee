@@ -2,18 +2,22 @@
     <div class="recipe-view-comp">
       <li v-for="recipe in store.recipes" :key="recipe.id" class="recipe-view-item">
         <div class="card border-success mb-3 recItem">
-          
+          <!-- TITLE -->
           <div class="card-header bg-success">{{recipe.name}}</div>
+          <!-- TITLE END -->
           <div class="container">
             <div class="side">
               <img :src="recipe.image" class="d-block user-select-none imgRecipe">
             </div>
             <div class="card-body main">
-              <h4 class="card-title">Primary card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h4 class="card-title">Ingredienser:</h4>
+              <li v-for="ingrediens in getVisibleIngredienser(recipe)" :key="ingrediens">
+                <p class="card-text">{{ ingrediens }}</p>
+              </li>
+              
             </div>
           </div>
-          </div>      
+        </div>      
       </li>
     </div>
   </template>
@@ -26,6 +30,25 @@
     onMounted(() => {
       store.fetchRecipes()
   })
+
+  // CONTENT MAKER
+  
+  let getVisibleIngredienser = (recipe) => {
+    let ingredienser = recipe.Ingredienser
+    let ingredienserToShow = []
+    let numberOfVisibleIngredienser = 3
+
+    for (let i = 0; i <= numberOfVisibleIngredienser; i++){
+      ingredienserToShow.push(ingredienser[i])
+    }
+    console.log(recipe.name + " : " + ingredienserToShow)
+
+    return ingredienserToShow
+  }
+
+
+  // CONTENT MAKER END
+
 </script>
   
 <style scoped>
