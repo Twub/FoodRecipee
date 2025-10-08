@@ -9,6 +9,8 @@ import RecipeViewComponent from '../components/RecipeViewComponents/RecipeViewCo
 </script>
   
 <style>
-  
+.recipe {
+  width: 80%;
+}
 </style>
   
