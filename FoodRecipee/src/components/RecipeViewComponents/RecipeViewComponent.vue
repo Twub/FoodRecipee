@@ -1,12 +1,18 @@
 <template>
     <div class="recipe-view-comp">
       <li v-for="recipe in store.recipes" :key="recipe.id" class="recipe-view-item">
-        <div class="card border-primary mb-3 recItem">
+        <div class="card border-success mb-3 recItem">
+          
           <div class="card-header bg-success">{{recipe.name}}</div>
-            <div class="card-body">
+          <div class="container">
+            <div class="side">
+              <img :src="recipe.image" class="d-block user-select-none imgRecipe">
+            </div>
+            <div class="card-body main">
               <h4 class="card-title">Primary card title</h4>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
+          </div>
           </div>      
       </li>
     </div>
@@ -40,6 +46,29 @@
   color: white;
 }
 
+.container {  
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+/* Sidebar/left column */
+.side {
+  flex: 15%;
+  background-color: #f1f1f1;
+}
+
+/* Main column */
+.main {
+  flex: 85%;
+  background-color: white;
+}
+
+.imgRecipe {
+  width: 100%;
+}
+
 
 </style>
-  
+  <!-- <img :src="recipe.image" class="d-block user-select-none" width="100%" height="270"> -->
