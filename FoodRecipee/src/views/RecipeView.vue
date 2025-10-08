@@ -11,6 +11,8 @@ import RecipeViewComponent from '../components/RecipeViewComponents/RecipeViewCo
 <style>
 .recipe {
   width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
   

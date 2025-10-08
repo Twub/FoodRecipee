@@ -1,7 +1,7 @@
 <template>
     <div class="recipe-view-comp">
       <li v-for="recipe in store.recipes" :key="recipe.id" class="recipe-view-item">
-        <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card border-primary mb-3 recItem">
           <div class="card-header bg-success">{{recipe.name}}</div>
             <div class="card-body">
               <h4 class="card-title">Primary card title</h4>
@@ -29,6 +29,9 @@
 
 .recipe-view-item {
   width: 80% !important;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bg-success {
