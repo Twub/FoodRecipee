@@ -10,10 +10,27 @@
               <img :src="recipe.image" class="d-block user-select-none imgRecipe">
             </div>
             <div class="card-body main">
-              <h4 class="card-title">Ingredienser:</h4>
-              <li v-for="ingrediens in getVisibleIngredienser(recipe)" :key="ingrediens">
-                <p class="card-text">{{ ingrediens }}</p>
-              </li>
+              
+              <div class="container2">
+                
+                <div class="side2">
+                  <h4 class="card-title">Ingredienser:</h4>
+                  
+                </div>
+                <div class="main2">
+                  <li v-for="ingrediens in getVisibleIngredienser(recipe, false)" :key="ingrediens" class="firstListIngrediens">
+                    <p class="card-text">{{ ingrediens }}</p>
+                  </li>
+                </div>
+                <div class="main3">
+                  <li v-for="ingrediens in getVisibleIngredienser(recipe, true)" :key="ingrediens">
+                    <p class="card-text">{{ ingrediens }}</p>
+                  </li>
+                </div>
+              </div>
+
+
+              
               
             </div>
           </div>
@@ -33,18 +50,29 @@
 
   // CONTENT MAKER
   
-  let getVisibleIngredienser = (recipe) => {
+  let getVisibleIngredienser = (recipe, secondList) => {
     let ingredienser = recipe.Ingredienser
     let ingredienserToShow = []
     let numberOfVisibleIngredienser = 3
-
-    for (let i = 0; i <= numberOfVisibleIngredienser; i++){
-      ingredienserToShow.push(ingredienser[i])
+    if (!secondList){
+      for (let i = 0; i <= numberOfVisibleIngredienser; i++){
+        ingredienserToShow.push(ingredienser[i])
+      }
+    
+    }else {
+      for (let i = 3; i < 7; i++){
+        if (ingredienser[i] != null || ingredienser[i] != ''){
+          ingredienserToShow.push(ingredienser[i])
+        }
+        
+        console.log(ingredienser)
+      }
     }
-    console.log(recipe.name + " : " + ingredienserToShow)
-
+    
     return ingredienserToShow
   }
+
+  
 
 
   // CONTENT MAKER END
@@ -92,6 +120,33 @@
   width: 100%;
 }
 
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0%;
+  padding-right: 0%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+.side2 {
+  flex: 20%;
+  background-color: white;
+}
+
+.main2 {
+  flex: 40%;
+  background-color: white;
+}
+
+.main3 {
+  flex: 40%;
+  background-color: white;
+}
+
+.firstListIngrediens {
+  margin-left: 10%;
+}
 
 </style>
   <!-- <img :src="recipe.image" class="d-block user-select-none" width="100%" height="270"> -->
